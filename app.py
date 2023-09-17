@@ -19,22 +19,9 @@ def home():
 
     return render_template('home.html')
 
-
-@app.route('/predict_api',methods=['POST'])
-
-def predict_api():
-    
-    data=request.json['data']
-    print(data)
-    print(np.array(list(data.values())).reshape(1,-1))
-
-    new_dataset=scalar.transform(np.array(list(data.values())).reshape(1,-1))
-
-    output=regmodel.predict(new_dataset)
-
-    print(output[0])
-
-    return jsonify(output[0])
+@app.route('/predict1',methods=['POST'])
+def predict1():
+    return render_template('predict.html')
 
 
 @app.route('/predict',methods=['POST'])
@@ -47,7 +34,7 @@ def predict():
 
     output=regmodel.predict(final_input)[0]
 
-    return render_template("home.html",prediction_text="The House price prediction is {}".format(output))
+    return render_template("predict.html",prediction_text="The House price prediction is {}".format(output))
 
 
 

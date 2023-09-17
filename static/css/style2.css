@@ -1,0 +1,26 @@
+/* Center the h2 heading */
+h2 {
+    text-align: center;
+}
+
+/* Style the paragraphs */
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Style the h3 headings */
+h3 {
+    font-size: 20px;
+    color: #04070a; /* Blue color for h3 headings */
+    margin-top: 20px;
+}
+body {
+    background-color: #E6E6FA;
+}
+
+.underlined-heading {
+    border-bottom: 2px solid #007bff; /* Adjust the color and thickness as needed */
+    display: inline; /* Ensures the border is only as wide as the text */
+}
